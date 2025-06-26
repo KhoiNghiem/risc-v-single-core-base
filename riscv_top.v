@@ -66,8 +66,7 @@ module riscv_top (
                                 .ALUOp(ALUOp_top));
 
         alu_control alu_c(.ALUOp_in(ALUOp_top),
-                        .func7(instruction_top[31:25]),
-                        .func3(instruction_top[14:12]),
+                        .instruction(instruction_top),
                         .ALUControl_out(control_top));
 
         alu_unit alu_u(.A(rd1_top),
